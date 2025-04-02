@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div className="flex items-center justify-between p-12 ">
       <div className="w-1/2">
-        <img src={aboutImage} alt="About Us" className="w-full h-auto object-cover rounded-lg shadow-lg" />
+        <img src={aboutImage} alt="About Us" className="w-full h-auto object-cover" />
       </div>
 
       <div className="w-1/2 pl-8">
