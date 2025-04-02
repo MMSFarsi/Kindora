@@ -3,7 +3,7 @@ import bannerImg from '/bannerImg.png';
 
 const Banner = () => {
   return (
-    <div className="flex items-center justify-between p-8 bg-gray-100">
+    <div className="flex items-center justify-between p-8 ">
       <div className="w-1/2">
         <img src={bannerImg} alt="Banner" className="w-full h-auto object-cover" />
       </div>
