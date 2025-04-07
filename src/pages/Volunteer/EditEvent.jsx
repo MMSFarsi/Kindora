@@ -54,8 +54,8 @@ const EditEvent = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto p-10  rounded-lg shadow-lg mt-10">
-            <h2 className="text-xl lg:text-3xl font-semibold text-center text-[#B354A6] mb-12">Update {eventName}</h2>
+        <div className="max-w-2xl mx-auto p-10  mt-10">
+            <h2 className="text-xl lg:text-3xl font-semibold text-center  mb-12">Update {eventName}</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 
                 <div>
@@ -128,7 +128,7 @@ const EditEvent = () => {
 
                 <button
                     type="submit"
-                    className="w-full py-3 px-4 bg-[#B354A6] text-white font-semibold rounded-lg  focus:ring-2 focus:ring-blue-300"
+                    className="w-full py-3 px-4 bg-green-500 text-white font-semibold rounded-lg  focus:ring-2 focus:ring-blue-300"
                 >
                     Update Event
                 </button>

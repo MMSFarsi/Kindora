@@ -23,7 +23,7 @@ const MyDonation = () => {
   }, [axiosPublic, user?.email]);
 
   return (
-    <div className=" p-6">
+    <div className=" min-h-screen p-6">
       <h2 className="text-2xl text-center font-semibold mb-4">My Donations</h2>
 
       {loading ? (

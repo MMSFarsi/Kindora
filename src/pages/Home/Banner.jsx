@@ -1,5 +1,6 @@
 import React from 'react';
 import bannerImg from '/bannerImg.png';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -13,7 +14,7 @@ const Banner = () => {
         />
       </div>
 
-      {/* Content Section */}
+
       <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-8 text-center md:text-left">
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
           Better donor engagement and conversions
@@ -22,9 +23,9 @@ const Banner = () => {
           Online forms, fundraising pages, and native integrations that help you engage donors, 
           manage giving, and increase your revenue.
         </p>
-        <button className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
+        <Link to={'/event'} className="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600 transition duration-300">
           Get started
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ const Dashboard = () => {
                   <li><NavLink to="/dashboard/addEvent" className={navClass}>Add Event</NavLink></li>
 
                   <li><NavLink to="/dashboard/my-assigned-events" className={navClass}>My Assigned Events</NavLink></li>
-                  <li><NavLink to="/dashboard/progress-reports" className={navClass}>Progress Reports</NavLink></li>
+                  {/* <li><NavLink to="/dashboard/progress-reports" className={navClass}>Progress Reports</NavLink></li> */}
                 </>
               )}
               <hr className="my-4 border-gray-700" />
@@ -57,7 +57,7 @@ const Dashboard = () => {
         )}
       </div>
 
-      {/* Desktop Sidebar */}
+    
       <div className="hidden lg:block w-56 min-h-screen bg-gray-800 text-gray-100 shadow-lg">
         <div className="p-6">
           <h2 className="text-2xl font-semibold mt-5 mb-6 text-center">Dashboard</h2>
@@ -80,7 +80,7 @@ const Dashboard = () => {
                 <li><NavLink to="/dashboard/available-events" className={navClass}>Available Events</NavLink></li>
                 <li><NavLink to="/dashboard/addEvent" className={navClass}>Add Event</NavLink></li>
                 <li><NavLink to="/dashboard/my-assigned-events" className={navClass}>My Assigned Events</NavLink></li>
-                <li><NavLink to="/dashboard/progress-reports" className={navClass}>Progress Reports</NavLink></li>
+                {/* <li><NavLink to="/dashboard/progress-reports" className={navClass}>Progress Reports</NavLink></li> */}
               </>
             )}
             <hr className="my-4 border-gray-700" />

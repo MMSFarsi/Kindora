@@ -19,7 +19,7 @@ const History = () => {
   }, [user]);
 
   return (
-    <div className=" p-6">
+    <div className="min-h-screen p-6">
       <h2 className="text-2xl text-center font-semibold mb-4">Transaction History</h2>
       {transactions.length === 0 ? (
         <p className="text-gray-600">No transactions found.</p>
