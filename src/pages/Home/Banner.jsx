@@ -1,21 +1,28 @@
 import React from 'react';
-import bannerImg from '/bannerImg.png'; 
+import bannerImg from '/bannerImg.png';
 
 const Banner = () => {
   return (
-    <div className="flex items-center justify-between p-8 ">
-      <div className="w-1/2">
-        <img src={bannerImg} alt="Banner" className="w-full h-auto object-cover" />
+    <div className="flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
+      {/* Image Section */}
+      <div className="w-full md:w-1/2">
+        <img
+          src={bannerImg}
+          alt="Banner"
+          className="w-full h-auto object-cover rounded-lg"
+        />
       </div>
 
-      <div className="w-1/2 pl-8">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+      {/* Content Section */}
+      <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-8 text-center md:text-left">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
           Better donor engagement and conversions
         </h2>
-        <p className="text-lg text-gray-600 mb-6">
-          Online forms, fundraising pages, and native integrations that help you engage donors, manage giving, and increase your revenue.
+        <p className="text-base md:text-lg text-gray-600 mb-6">
+          Online forms, fundraising pages, and native integrations that help you engage donors, 
+          manage giving, and increase your revenue.
         </p>
-        <button className="btn bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600">
+        <button className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
           Get started
         </button>
       </div>

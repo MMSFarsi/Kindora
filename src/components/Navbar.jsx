@@ -2,13 +2,17 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '/logo.png';
 import { AuthContext } from '../provider/AuthProvider';
+import useAdmin from '../Hooks/useAdmin';
+import useVolunteer from '../Hooks/useVolunteer';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  const [isAdmin]=useAdmin()
+  const [isVolunteer]=useVolunteer()
+
 
   return (
-    <div className="navbar sticky top-0 z-50 bg-white shadow-lg px-20">
+    <div className="navbar sticky top-0 z-50 bg-white shadow-lg px-1 lg:px-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,12 +26,26 @@ const Navbar = () => {
             <li><NavLink to="/event">EVENT</NavLink></li>
             <li><NavLink to="/donate">DONATE</NavLink></li>
             <li><NavLink to="/contact">CONTACT</NavLink></li>
+            <li>
+  {
+    user && (
+      isAdmin ? (
+        <NavLink to='/dashboard/manageUser'>DASHBOARD</NavLink>
+      ) : isVolunteer ? (
+        <NavLink to='/dashboard/available-events'>DASHBOARD</NavLink>
+      ) : (
+        <NavLink to='/dashboard/myDonation'>DASHBOARD</NavLink>
+      )
+    )
+  }
+</li>
+
           </ul>
         </div>
 
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} alt="Kindora Logo" className="h-8" />
-          <span className="text-xl"><span className="text-green-600">K</span>indora</span>
+          <img src={logo} alt="Kindora Logo" className="h-6 lg:h-8" />
+          <span className="text-sm lg:text-xl"><span className="text-green-600">K</span>indora</span>
         </Link>
       </div>
 
@@ -38,6 +56,20 @@ const Navbar = () => {
           <li><NavLink to="/event">EVENT</NavLink></li>
           <li><NavLink to="/donate">DONATE</NavLink></li>
           <li><NavLink to="/contact">CONTACT</NavLink></li>
+          <li>
+  {
+    user && (
+      isAdmin ? (
+        <NavLink to='/dashboard/manageUser'>DASHBOARD</NavLink>
+      ) : isVolunteer ? (
+        <NavLink to='/dashboard/available-events'>DASHBOARD</NavLink>
+      ) : (
+        <NavLink to='/dashboard/myDonation'>DASHBOARD</NavLink>
+      )
+    )
+  }
+</li>
+
         </ul>
       </div>
 
@@ -57,7 +89,7 @@ const Navbar = () => {
             <Link to="/login">Login</Link>
             <Link 
               to="/register" 
-              className="btn px-4 ml-3 py-1 text-xs bg-[#46D89F] text-[#17191a]"
+              className="btn lg:px-4 px-1 ml-3  py-1 text-xs bg-[#46D89F] text-[#17191a]"
             >
               Get started free
             </Link>

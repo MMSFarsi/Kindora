@@ -25,7 +25,6 @@ const AddEvent = () => {
     });
 
     if (res.data.success) {
-      // Send camp details to database
       const eventDetails = {
         eventName: data.eventName,
         dateTime: data.dateTime,
@@ -53,9 +52,9 @@ const AddEvent = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-3  rounded-lg mt-10">
-      <h2 className="text-xl lg:text-3xl font-semibold text-center text-[#B354A6] mb-12">Add A Event</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <div className=" p-6 min-h-screen  ">
+      <h2 className="text-2xl text-center font-semibold mb-4">Add A Event</h2>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-xl mx-auto">
     
         <div>
           <label className="block text-sm font-medium text-gray-700">Add a Fundraising Event</label>
@@ -125,7 +124,7 @@ const AddEvent = () => {
     
         <button
           type="submit"
-          className="w-full py-3 px-4 bg-[#B354A6] text-white font-semibold rounded-lg  focus:ring-2 focus:ring-blue-300"
+          className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300"
         >
           Add Event
         </button>

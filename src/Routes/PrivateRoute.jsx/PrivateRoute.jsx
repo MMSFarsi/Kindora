@@ -1,13 +1,16 @@
-import useAuth from "@/Hooks/useAuth";
+
 import { Navigate, useLocation } from "react-router-dom";
+import LoadingSpinner from "../../../LoadingSpinner";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 
 const PrivateRoute = ({children}) => {
     const location = useLocation()
-    const {user,loading}=useAuth()
+    const {user,loading}=useContext(AuthContext)
     if(loading){
-        return <progress className="progress w-56 "></progress>
+        return <LoadingSpinner></LoadingSpinner>
     }
     if(user){
         return children
