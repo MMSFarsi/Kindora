@@ -12,8 +12,6 @@ const Donate = () => {
         setSelectedEvent(event);
     };
 
-
-
     return (
         <div className="max-w-4xl min-h-screen mx-auto p-1 lg:p-6">
             <h2 className="text-2xl font-bold text-center mb-6">Donate to Fundraising Events</h2>

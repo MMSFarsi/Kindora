@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const RecentEvent = () => {
     const [events] = useEvent();
 
-    const recentEvents = events ? [...events].sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).slice(0, 3)
+    const recentEvents = events ? [...events].sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).slice(0, 6)
     : [];
 
     const getShortDescription = (text) => {

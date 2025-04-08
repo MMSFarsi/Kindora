@@ -12,8 +12,6 @@ const Payment = () => {
   const queryParams = new URLSearchParams(location.search);
   const donationAmount = queryParams.get('amount'); 
   const [events] = useEvent();
-
-  // Find the selected event
   const selectedEvent = events.find(event => event._id === id);
 
   return (

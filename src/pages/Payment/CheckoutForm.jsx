@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import useAuth from '../../Hooks/useAuth';
 
-const CheckoutForm = ({ amount,eventName }) => {  // ✅ Fix: Destructure prop correctly
+const CheckoutForm = ({ amount,eventName }) => { 
   const stripe = useStripe();
   const elements = useElements();
   const [error, setError] = useState('');
@@ -16,7 +16,7 @@ const CheckoutForm = ({ amount,eventName }) => {  // ✅ Fix: Destructure prop c
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (amount > 0) {  // ✅ Fix: Use correct amount
+    if (amount > 0) {  
       axiosSecure.post('/create-payment-intent', { price: amount })
         .then(res => {
           setClientSecret(res.data.clientSecret);

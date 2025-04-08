@@ -24,8 +24,7 @@ const Newsletter = () => {
         <button
           type="submit"
           className="bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300"
-        >
-          Subscribe
+        > Subscribe
         </button>
       </form>
     </div>

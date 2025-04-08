@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      {/* Mobile Navbar */}
+    
       <div className="lg:hidden bg-gray-900 text-gray-100 shadow-lg">
         <div className="p-4 flex justify-between items-center">
           <h2 className="text-lg font-semibold">Dashboard</h2>
@@ -98,7 +98,7 @@ const Dashboard = () => {
 
 const navClass = ({ isActive }) =>
   `block px-4 py-2 rounded-md ${
-    isActive ? "bg-blue-500 text-white" : "hover:bg-gray-700"
+    isActive ? "bg-green-500 text-white" : "hover:bg-green-700"
   }`;
 
 export default Dashboard;

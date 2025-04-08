@@ -5,16 +5,10 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
-      {/* Image Section */}
       <div className="w-full md:w-1/2">
-        <img
-          src={bannerImg}
-          alt="Banner"
-          className="w-full h-auto object-cover rounded-lg"
-        />
+        <img src={bannerImg}  alt="Banner"
+          className="w-full h-auto object-cover rounded-lg"/>
       </div>
-
-
       <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-8 text-center md:text-left">
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
           Better donor engagement and conversions
